@@ -3,7 +3,7 @@
 /*
 # imports
 */
-import ShowsCollection from '/js/components/Collections/ShowsCollection.js';
+import ShowsCollection from '../../components/Collections/ShowsCollection.js';
 import { formatDate } from '../../Utils.js';
 
 // React create reference

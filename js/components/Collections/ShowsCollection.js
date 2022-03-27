@@ -3,8 +3,8 @@
 /* 
 # imports 
 */
-import { loadShowByData } from "/js/main.js";
-import ShowItem from '/js/components/Items/ShowItem.js';
+import { loadShowByData } from "../../main.js";
+import ShowItem from '../Items/ShowItem.js';
 import LoadingCard from "../Items/LoadingCard.js";
 import { urlContentToDataUri, hoverInBody } from '../../Utils.js';
 import { fetchScheduleShows } from "../../managers/DataManager.js";

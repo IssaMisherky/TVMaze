@@ -68,7 +68,7 @@ class ShowItem extends React.Component {
             style: { display: this.state.display ? "" : "none" } }, [ this.mediumImage,
             // Make sure that there is a rating value then divide it by two so it's ratio becomes 0-5 instead of 0-10
             e(Rating, { key: 1, stars: 5, value: this.props.data.show.rating.average != null ? this.props.data.show.rating.average / 2 : null }),
-            e('div', { key: 2, className: "desc" }, this.props.data.name)
+            e('div', { key: 2, className: "desc" }, this.props.data.show.name)
         ]);
     }
 
