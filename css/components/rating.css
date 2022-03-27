@@ -1,0 +1,19 @@
+span.stars {
+    color: #919191;
+    font-size: 11px;
+
+    margin-right: 6px;
+}
+
+span.stars i {
+    margin-right: 3px;
+}
+
+span.stars i.checked {
+    color: #333;
+}
+
+.rating {
+    font-weight: bold;
+    font-size: 11px;
+}

@@ -1,0 +1,185 @@
+/*#region ShowInnerHeader*/
+.show-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.show-header > div {
+    margin: 1rem 2rem;
+    font-size: 0.9rem;
+}
+
+.show-header p {
+    color: black !important;
+    font-size: 0.9rem;
+    max-width: none;
+}
+
+.show-header img {
+    transition: all 0.7s;
+    min-height: 240px;
+    z-index: 9;
+}
+
+@media only screen and (min-width: 600px) {
+    .show-header img:hover {
+        transform: translate(12%, 16%) scale(1.4);
+        box-shadow: 0 0 14px 8px #0000003d;
+    }
+}
+/*#endregion ShowInnerHeader*/
+
+/*#region HTMLContainers*/
+body.showPage header {
+    margin-bottom: -2rem;
+}
+
+body.showPage main {
+    padding-top: 4rem;
+}
+
+body.showPage main::before {
+    top: 0;
+}
+/*#endregion HTMLContainers*/
+
+/*#region ShowBody*/
+.show_body_box {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    gap: 1rem;
+}
+
+.show_body_box > div {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.show_body_box h2 {
+    font-weight: 400;
+}
+
+.show_body_box .row div {
+    display: inline-block;
+}
+/*#endregion ShowBody*/
+
+/*#region row*/
+.row {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: solid 1px black;
+    max-width: 640px;
+    color: #0000009e;
+}
+
+.row div {
+    margin-right: 2rem;
+}
+
+.row .row_title {
+    min-width: 180px;
+    font-weight: 500;
+    color: black;
+}
+
+.profile-image {
+    position: relative;
+    border-radius: 50%;
+    background-color: grey;
+
+    font: normal 16px FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.profile-image::before {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\f007";
+}
+
+.row .profile-image {
+    width: 40px;
+    height: 40px;
+    margin: -1rem 2rem -1rem 0;
+}
+
+.row.actor .list {
+    display: flex;
+    margin-right: 0;
+}
+
+.short {
+    min-width: 120px;
+}
+/*#endregion row*/
+
+/* Floating image animation */
+.floating_image {
+    transition: all 0.4s;
+    top: 5rem !important;
+    left: 3rem !important;
+    width: 240px !important;
+    height: 360px !important;
+    opacity: 0;
+    z-index: 99;
+}
+
+@media only screen and (max-width: 600px) {
+    .show-header img {
+        width: 100%;
+    }
+
+    .show-header {
+        flex-wrap: wrap;
+    }
+
+    .show-header > div {
+        margin: 2rem 0rem;
+    }
+    
+    body.showPage header {
+        margin-bottom: 0;
+    }
+
+    .show_body_box {
+        display: block;
+    }
+
+    .show_body_box > div > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        padding: 1.2rem 0;
+        width: 50%;
+        display: block !important;
+        border-bottom: none !important;
+    }
+
+    .row .row_title {
+        min-width: 0 !important;
+    }
+
+    .row div {
+        display: block !important;
+    }
+
+    .row.actor {
+        flex: 1 100%;
+        display: flex !important;
+    }
+
+    .profile-image {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 1rem !important;
+    }
+}

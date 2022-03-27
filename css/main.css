@@ -1,0 +1,122 @@
+/*#region Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+/*#endregion Imports*/
+
+/*#region HTMLContainers*/
+html {
+    min-height: 100%; /* In order to keep footer at bottom */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    /* In order to keep footer at bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background: #e3e3e3;
+    font-family: 'Rubik', sans-serif;
+
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(16px) grayscale(4%);
+
+    flex: 1;
+}
+
+header {
+    transition: all 1s;
+}
+
+main {
+    position: relative;
+
+    /* no need for this line */
+    min-height: 240px;
+
+    /* In order to keep footer at bottom */
+    flex: 1;
+
+    overflow: visible;
+    transition: all 1s;
+}
+
+header, main {
+    padding: 1rem 3rem;
+}
+
+/* main background */
+main::before {
+    position: absolute;
+    top: 120px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    content: '';
+    z-index: -1;
+}
+
+footer {
+    min-height: 60px;
+}
+/*#endregion HTMLContainers*/
+
+/*#region Text*/
+p {
+    max-width: 640px;
+    font-size: 1.3rem;
+    color: #00000099;
+}
+
+header p {
+    font-weight: 400;
+    margin: auto 0;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+/*#endregion Text*/
+
+.fill_space {
+    flex: 1;
+}
+
+/* ===== mobile fit ===== */
+@media only screen and (max-width: 600px) {
+    main {
+        background-color: white;
+    }
+
+    header, main {
+        padding: 1rem 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
